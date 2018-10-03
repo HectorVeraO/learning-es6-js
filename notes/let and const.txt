@@ -1,0 +1,6 @@
+let and const are keywords to define variables with certain properties
+
+let is a scoped variables
+const is for a variable that shouldn't be modified, a constant
+
+when you use "let" on the Global Scope it behaves equally to "var"

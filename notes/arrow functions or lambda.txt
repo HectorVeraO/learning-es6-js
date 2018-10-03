@@ -1,0 +1,5 @@
+Arrow function expression, they have a shorter syntax than a function expression, and they do not have their own "this", arguments, or new.target.
+These function expressions are best suited for non method functions, and they cannot be used as constructors.
+
+Again the lack of their own "this" is pretty useful another thing is given that "this" comes fromt he surrounding lexical context,
+"strict mode" rules with regards to "this" are ignored.

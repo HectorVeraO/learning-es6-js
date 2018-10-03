@@ -1,0 +1,4 @@
+The Promise object is used for deferred and asynchronous computations, it represents an operation that hasn't completed yet
+but is expected in the future.
+
+The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its value.

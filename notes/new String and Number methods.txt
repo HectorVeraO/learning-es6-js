@@ -1,0 +1,30 @@
+some new String methods are
+startsWith(string)
+endsWith(string)
+includes(string)
+
+they are pretty self explanatory, for detailed info check the doc
+
+some new Number methods are
+isFinite(number)
+isNaN(arg)
+isInteger(number)
+
+again check the doc
+
+ES6 also includes a special notation for numbers in different bases,
+such as hexadecimal
+
+for hexadecimal numbers use the prefix
+0x
+for binary numbers use the prefix
+0b
+for octal number use the prefix
+0o
+
+you can even use those prefixes inside template literals,
+just use them as if they were variables, e.g.
+
+`The number: ${0xFFF}`
+
+which should be The number: 4095

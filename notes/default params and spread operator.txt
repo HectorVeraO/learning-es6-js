@@ -1,0 +1,5 @@
+Default params allow you to set a default value to a certain parameter, said value
+will be used when no input is received.
+
+Spread Operator allows an iterable object (arrays, strings, etc) to be expanded in places
+where zero or more arguments are expected.

@@ -1,0 +1,11 @@
+The Babel tutorial teaches you to "compile" ES6 code
+into ES5 code.
+
+First you need to install Babel
+Set up where your compiled code will be placed,
+  dist in the example,
+  src contains ES6 code,
+  and write the babel scripts to compile your code
+  in the package.json file.
+Write your ES6 code
+Run the build script.

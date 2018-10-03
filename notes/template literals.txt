@@ -1,0 +1,10 @@
+Templates literals allow you to write large strings
+with variables without the need of concatenation,
+you can even skip lines without concatenating,
+to create a template literal use back ticks (``).
+
+to call variables inside a template literal do
+${varName}
+
+to call functons inside a template do
+${functionName(args)}

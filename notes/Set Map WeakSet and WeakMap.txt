@@ -1,0 +1,17 @@
+New data structures
+
+Set
+Map
+WeakSet
+WeakMap
+
+The Set structure lets you store unique values of any type, whether primitive values or object references.
+
+The Map structure holds key-value pairs. Any value (both object and primitive values) may be used as either a key or a value.
+
+The WeakSet structure lets you store weakly held objects in a collection, they are a collection of objects ONLY.
+
+The WeakMap structure is a collection of key-value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitraty values.
+
+What does "weakly held" mean?
+That there isn't another reference to an object so they can be garbage collected.

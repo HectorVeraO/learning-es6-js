@@ -1,0 +1,13 @@
+What's new? An overview
+
+let and const declarations.
+Destructuring assignment.
+Classes and inheritance.
+Template Strings.
+String features.
+Math & Number features.
+New data structures.
+Iterators.
+Generators.
+Promises & Asynchronous data.
+Arrow functions.

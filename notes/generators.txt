@@ -1,0 +1,4 @@
+Generators are functions that can be paused and then resumed as many times as you like, and at each pause it can yield a value back much like it would
+return except it's just paused so it can be resumed to yield further values.
+
+This function* return a Generator object.
