@@ -1,0 +1,4 @@
+Sources that I took notes from
+  Brad Traversy (Traversy Media YT Channel)
+  Mattias Peter Johansson (MPJ) (Fun Fun Function YT Channel)
+  Mozilla Developer's Network (MDN)
