@@ -1,5 +1,7 @@
 "use strict";
 // Declare global variables here
+const fs = require("fs");
+
 let animals = [
   { name: "Pancha", species: "Dog" },
   { name: "Perla", species: "Dog" },
@@ -49,3 +51,21 @@ console.log("\n3. The reduce() function, let's count how many animals there are 
 let animalAmmount = animals.reduce((ammount, animal) => ammount + 1, 0);
 console.log("There are ", animalAmmount, " animals");
 // This example is bad because we can just use the length property to get the ammount of animals in the array, but I couldn't think of anything better
+// Now a more complex example, it will read from a txt file and transform its data into a json string
+// data.txt is a double-space separated values
+console.log("A more complex example");
+let output = fs.readFileSync(`${__dirname}/data.txt`, "utf8")
+  .trim()
+  .split("\n")
+  .map(line => line.replace("\r", ""))
+  .map(line => line.split("  "))
+  .reduce((customers, line) => {
+    customers[line[0]] = customers[line[0]] || [];
+    customers[line[0]].push({
+      name: line[1],
+      price: line[2],
+      quatity: line[3]
+    });
+    return customers;
+  }, {})
+console.log("Output: ", JSON.stringify(output, null, 2));
