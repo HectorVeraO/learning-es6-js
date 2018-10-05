@@ -1,0 +1,2 @@
+literals are a way to represent fixed values in source code, for example to represent a binary number in JS you do
+0b1001 or 0B11011
