@@ -1,0 +1,6 @@
+Currying is when a function doesn't take all of its arguments upfront, instead
+it wants you to give it the first argument and then the function returns another function, which
+you are supposed to call with the second argument which will return another function that
+you're supposed to call with the third argument which in turn will return another function and so on
+until the last argument is received and then and the function at the end of the chain will be the one
+to return the value that you actually want.
