@@ -3,3 +3,5 @@ a higher order function is a function that takes one or more functions as a para
 this is possible when functions represent a value.
 
 this concept goes along with Functional Programming.
+
+Some higher order functions built in in JavaScript are filter(), reduce(), map(), etc.
