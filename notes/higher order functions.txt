@@ -1,0 +1,5 @@
+a higher order function is a function that takes one or more functions as a parameter.
+
+this is possible when functions represent a value.
+
+this concept goes along with Functional Programming.
