@@ -1,0 +1,2 @@
+In JS functions are also closures, which means that,
+the function body has access to variables that are defined outside the function
