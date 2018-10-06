@@ -1,0 +1,5 @@
+recursion is when a function calls itself until it doesn't (thank you MPJ)
+
+** Offtopic
+Callstack means the stack of function calls that your code has made, 
+  most languages have a limit to the ammount of the callstack
