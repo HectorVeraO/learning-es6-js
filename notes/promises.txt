@@ -1,4 +1,14 @@
+From Traversy Media:
+
 The Promise object is used for deferred and asynchronous computations, it represents an operation that hasn't completed yet
 but is expected in the future.
 
 The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its value.
+
+From MPJ Fun Fun Functions:
+
+// Offnote: callbacks are a way of telling the code that when A is done execute B
+// Offnote: One of the big things about functional programming is to make your code more COMPOSABLE
+
+Promises are like callbacks, but a bit more powerfull because unlike callbacks, promises are composable.
+Promises are objects.

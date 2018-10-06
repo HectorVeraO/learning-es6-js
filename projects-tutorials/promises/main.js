@@ -1,5 +1,4 @@
-"use strict"
-
+"use strict";
 // Try the examples below 1 at a time, or else the results will get mixed
 
 /**
@@ -10,7 +9,8 @@
  */
 
 // Example 1
-console.log("*".repeat(33));
+console.log("\nTraversy Media");
+console.log("\n" + "*".repeat(33));
 console.log("\n\tExample 1\n");
 // Immediately resolved promised
 var myPromise = Promise.resolve("Foo");
@@ -79,3 +79,74 @@ getData("GET", "http://jsonplaceholder.typicode.com/todos")
   .catch(function (err) {
     console.log(err)
   });
+
+// Example from MPJ Fun Fun Function, EXECUTE ON BROWSER
+console.log("\nFun Fun Function, EXECUTE ON BROWSER");
+console.log("\n" + "*".repeat(50));
+// Example using callbacks, don't use when you need it to be COMPOSABLE it it's horrible, if you do you'll get the NodeJS Christmas Tree of DOOM
+// THREE IMAGES OF CATS SHOULD BE DISPLAY ON THE SCREEN
+console.log("\nExample using callbacks");
+
+function loadImageCallbacked(url, callback) {
+  let image = new Image();
+  image.onload = function() {
+    callback(null, image);
+  };
+  image.onerror = function() {
+    let message = "Couldn't load image at " + url;
+    callback(new Error(message));
+  }
+  image.src = url;
+}
+
+// addImg() function is also used in the promise example
+let addImg = src => {
+  let imgElement = document.createElement("img");
+  imgElement.src = src;
+  document.body.appendChild(imgElement);
+}
+
+loadImageCallbacked("./img/cat1.jpg", (error, img1) => {
+  if (error) throw error;
+  addImg(img1.src);
+  loadImageCallbacked("./img/cat2.jpg", (error, img2) => {
+    if (error) throw error;
+    addImg(img2.src);
+    loadImageCallbacked("./img/cat3.jpg", (error, img3) => {
+      if (error) throw error;
+      addImg(img3.src);
+    });
+  });
+});
+
+// Example from MPJ Fun Fun Function, EXECUTE ON BROWSER
+console.log("\nFun Fun Function, EXECUTE ON BROWSER");
+console.log("\n" + "*".repeat(50));
+// Example using PROMISES, use them when you need to compose
+// THREE IMAGES OF CATS SHOULD BE DISPLAY ON THE SCREEN
+console.log("\nExample using promises");
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    image.onload = function() {
+      resolve(image);
+    };
+    image.onerror = function() {
+      let message = "Couldn't load image at " + url;
+      reject(new Error(message));
+    };
+    image.src = url;
+  });
+};
+
+Promise.all([
+  loadImage("./img/cat1.jpg"),
+  loadImage("./img/cat2.jpg"),
+  loadImage("./img/cat3.jpg")
+]).then((images) => {
+  images.forEach(i => {
+    addImg(i.src);
+  });
+}).catch((errors) => {
+  // Do error handling here
+});
