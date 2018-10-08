@@ -1,0 +1,3 @@
+Non mathematical definition
+
+Functors are generic collections that have a map method
